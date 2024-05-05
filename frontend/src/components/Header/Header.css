@@ -1,0 +1,71 @@
+.header {
+    height: 60vh; /* Changed height for better fit */
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat center center; /* Center the background image */
+    background-size: cover; /* Ensure the background covers the entire header */
+    position: relative;
+}
+
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adjusted alignment for better readability */
+    gap: 2vw; /* Reduced the gap between elements */
+    max-width: 60%; /* Increased max-width for better content placement */
+    bottom: 10%; /* Adjusted position for better alignment */
+    left: 10%; /* Adjusted position for better alignment */
+    animation: fadeIn 3s;
+}
+
+
+.header-contents h2 {
+    font-weight: 600; /* Increased font weight for better emphasis */
+    color: #fff; /* Changed font color to white for better contrast */
+    font-size: clamp(2.5rem, 6vw, 3.5rem); /* Used clamp to ensure font size is responsive */
+    line-height: 1.2; /* Improved line height for better readability */
+    margin: 0; /* Removed margin for cleaner appearance */
+}
+
+.header-contents p {
+    color: #fff; /* Changed font color to white for better contrast */
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Used clamp to ensure font size is responsive */
+    margin: 0; /* Removed margin for cleaner appearance */
+}
+
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+.header-contents button {
+    background: transparent;
+    background-color: #fff;
+    font-weight:500 ;
+    font-size: max(1vw,13px);
+    color: #747474;
+    border:none;
+    padding: 1vw 2.3vw;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none; /* Remove button outline */
+}
+
+@media (max-width: 1050px) {
+.header-contents{
+    max-width: 45%;
+}
+}
+
+@media (max-width: 750px) {
+  
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding:2vw 4vw;
+    }
+    }

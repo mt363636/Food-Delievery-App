@@ -1,0 +1,61 @@
+.list-table-format {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.list-table-format.title {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+.list-table-format img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+    .list-table-format {
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 15px;
+    }
+    .list-table-format.title {
+        display: none;
+    }
+}
+
+.cursor {
+    cursor: pointer;
+    position: relative;
+}
+
+.cursor::after {
+    content: '✕';
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff6347;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cursor:hover::after {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,65 @@
+/* Base styles */
+.order-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    border: 1px solid #ff6347; /* Tomato */
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-size: 1rem; /* 16px */
+    color: #505050;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.order-item-food,
+.order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 1rem; /* 16px */
+    margin-bottom: 0.5rem; /* 8px */
+}
+
+.order-item-address {
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.order-item select {
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    padding: 5px;
+    font-size: 13px;
+    width: 135px;
+    height: 45px; /* Adjust height as needed */
+    outline: none;
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .order-item {
+        font-size: 0.875rem; /* 14px */
+        grid-template-columns: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);
+        padding: 1rem 0.5rem; /* 16px 8px */
+    }
+
+    .order-item select {
+        padding: 5px;
+        font-size: 11px;
+        width: 120px;
+        height: 35px; 
+    }
+
+    .order-item img {
+        width: 2.5rem; /* 40px */
+    }
+}
+
+/* Hover effect */
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
