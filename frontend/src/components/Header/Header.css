@@ -69,3 +69,24 @@
         padding:2vw 4vw;
     }
     }
+
+    .header-contents button {
+        background-color: white;
+        color: tomato;
+        border: 2px solid tomato; /* Add border to create a round shape */
+        border-radius: 50px; /* Make the border radius large to create a round button */
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Apply transition to all properties */
+        outline: none; /* Remove default outline */
+    }
+    
+    .header-contents button:hover {
+        background-color: tomato;
+        color: white;
+        border-color: transparent; /* Remove border color on hover */
+        transform: translateY(-2px); /* Move button up slightly on hover */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect on hover */
+    }
+    
+    
